@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Anita Kamburova - Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+	<style>
+		
+		body {
+				font-family: "Inter", sans-serif;
+				background: #f5f5f5;
+				color: #222;
+				min-height: 100vh;
+				display: flex;
+		}
+		
+		.sidebar {
+			width: 260px;
+			background: #efefef;
+			padding: 50px 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		
+		.sidebar h1 {
+			font-family: 'Playfair Display', serif;
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 40px;
+		}
+		
+		.menu-section {
+			margin-bottom: 30px;
+		}
+		
+		.menu-section-title {
+			font-weight: 600;
+			margin-bottom: 10px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+		
+		.menu-section-title:hover {
+			text-decoration: underline;
+		}
+		.menu {
+			margin-left: 10px;
+			transition: all 0.3s ease;
+		}
+		
+		.menu.collapsed {
+			display: none;
+		}
+		
+		.menu a {
+				display: block;
+				text-decoration: none;
+				color: #444;
+				font-size: 14px;
+				margin: 6px 0;
+				cursor: pointer;
+				transition: color 0.2s ease;
+		}
+		
+		.menu a:hover {
+			color: #000;
+		}
+		
+		.menu a.active {
+			font-weight: 600;
+			color: #5a0f1a;
+		}
+		
+		.menu-section-title.active {
+			color: #5a0f1a;
+			font-weight: 700;
+		}
+		
+		.main {
+			flex: 1;
+			padding: 60px 70px;
+		}
+		
+		.page-title {
+			font-family: 'Playfair Display' serif;
+			font-size: 32px;
+			text-align: center;
+			margin-bottom: 50px;
+			font-weight: 500;
+		}
+		
+		.project-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			//grid-auto-rows: 300px;
+		}
+		
+		.project {
+			position: relative;
+			overflow: hidden;
+			cursor: pointer;
+		}
+		
+		.project img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.4s ease;
+		}
+		
+		.project:hover img {
+			transform: scale(1.05);
+		}
+		
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.75);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: "Playfair Display", serif;
+			font-size: 28px;
+			color: #6b1e1e;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+			pointer-events: none;
+		}
+		.overlay.text {
+			top: -33px;
+			background: rgba(0, 0, 0, 0);
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			color: grey;
+			pointer-events: none;
+		}
+		
+		.project:hover .overlay {
+			opacity: 1;
+		}
+		
+		.hidden {
+			display: none !important;
+		}
+		
+		.project.full {
+			grid-column: span 2;
+			height: 350px;
+		}
+	
+		@media (max-width: 1000px) {
+			body {
+				flex-direction: column;
+			}
+			.sidebar {
+				width: 100%;
+				padding: 30px;
+			}
+			.main {
+				padding: 40px 30px;
+			}
+			.project-grid {
+				grid-template-columns: 1fr;
+			}
+			.project.full {
+				grid-column: span 1;
+			}
+		}
+	</style>
+</head>
+<body>
+	<aside class="sidebar">
+		<h1>Anita Kamburova</h1>
+			
+		<div class="menu-section">
+			<div class="menu-section-title" id="work">Work</div>
+			<div class="menu">
+				<a href="advertising.html">Advertising</a>
+				<a href="socialmedia.html">Social Media</a>
+				<a href="edication.html">Editorial & Layout</a>
+			</div>
+		</div>
+			
+		<div class="menu-section">
+			<div class="menu">
+				<a href="about.html">About</a>
+				<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fpq_1V3OK0IE8JnRBWEiUCGTWt_2dW_Q/view">Link to CV</a>
+			</div>
+		</div>
+			
+		<div class="menu-section">
+			<div class="menu-section-title" id="visualExploration">Visual Exploration</div>
+			<div class="menu">
+				<a href="personalproject.html">Personal Projects</a>
+			</div>
+		</div>
+	</aside>
+	<main class="main">
+		<div class="page-title">Anita Kamburova</div>
+				
+		<div class="project-grid" id="projectsGrid">
+			<div class="project" data-category="advertising" id="advertisingProject">
+				<img id="prjImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/bad79570-e93d-4269-9936-00f3d6870ada_carw_16x9x1280.jpeg?h=2a2a0491244a24d21e0ccc364ffd2fd0" />
+				<div class="overlay">Personal Project</div>
+				<div class="overlay text">2026</div>
+			</div>
+		</div>
+	</main>
+	<script>
+		const visual = document.getElementById("visualExploration");
+		const work = document.getElementById("work");
+		const prjImg = document.getElementById("prjImg");
+		
+		prjImg.addEventListener("click", function() {
+			window.location.href = "personalproject.html";
+		})
+		
+		work.addEventListener("click", function() {
+			window.location.href = "work.html";
+		});
+		
+		visual.addEventListener("click", function() {
+			window.location.href = "visual.html";
+		});
+		
+		const links = document.querySelectorAll(".menu a");
+		const currentPage = window.location.pathname.split("/").pop();
+		
+		links.forEach(link => {
+			if(link.getAttribute("href") === currentPage) {
+				link.classList.add("active")
+				//link.closest(".menu-section").querySelector(".menu-section-title").classList.add("active");
+			}
+		});
+		
+		if(currentPage === "visual.html") {
+			visual.classList.add("active");
+		}
+	</script>
+</body>
+</html>
