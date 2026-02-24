@@ -22,6 +22,26 @@
 			justify-content: flex-start;
 		}
 		
+		.about, .cv {
+			display: block;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			color: black;
+			margin-bottom: 6px;
+
+			transition: color 0.2s ease;
+		}
+		
+		.about:hover, .cv:hover {
+			color: #5a0f1a;
+			cursor: pointer;
+		}
+		
+		.about.active, .cv.active{
+			color: #5a0f1a;
+		}
+		
 		.sidebar h1 {
 			font-family: 'Playfair Display', serif;
 			font-size: 22px;
@@ -192,10 +212,8 @@
 		</div>
 			
 		<div class="menu-section">
-			<div class="menu">
-				<a href="about.html">About</a>
-				<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fpq_1V3OK0IE8JnRBWEiUCGTWt_2dW_Q/view">Link to CV</a>
-			</div>
+			<a class="about" href="about.html">About</a>
+			<a class="cv" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fpq_1V3OK0IE8JnRBWEiUCGTWt_2dW_Q/view">Link to CV</a>
 		</div>
 			
 		<div class="menu-section">

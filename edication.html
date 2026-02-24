@@ -74,6 +74,26 @@
 			cursor: pointer;
 		}
 		
+		.about, .cv {
+			display: block;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 14px;
+			color: black;
+			margin-bottom: 6px;
+
+			transition: color 0.2s ease;
+		}
+		
+		.about:hover, .cv:hover {
+			color: #5a0f1a;
+			cursor: pointer;
+		}
+		
+		.about.active, .cv.active{
+			color: #5a0f1a;
+		}
+		
 		.menu a.active {
 			font-weight: 600;
 			color: #5a0f1a;
@@ -232,10 +252,8 @@
 		</div>
 		
 		<div class="menu-section">
-			<div class="menu">
-				<a href="about.html">About</a>
-				<a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fpq_1V3OK0IE8JnRBWEiUCGTWt_2dW_Q/view">Link to CV</a>
-			</div>
+			<a class="about" href="about.html">About</a>
+			<a class="cv" target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1Fpq_1V3OK0IE8JnRBWEiUCGTWt_2dW_Q/view">Link to CV</a>
 		</div>
 		
 		<div class="menu-section">
@@ -247,32 +265,32 @@
 	</aside>
 	
 	<main class="main">
-			<div class"advertising-page" id="advertisingPage">
-				<h2 style="text-align:center; margin-bottom:40px;">Editorial & Layout</h2>
+		<div class"advertising-page" id="advertisingPage">
+			<h2 style="text-align:center; margin-bottom:40px;">Editorial & Layout</h2>
 				
-				<div class="ad-top">
-					<div class="ad-item large">
-						<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/6faf2bc8-7700-4f34-be8b-406147a7832f_rw_1920.jpg?h=7fe150722d048c84f0509ca1e4f0f79f"/>
-					</div>
-					<div class="ad-item large">
-						<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/c11f7408-a1bd-420a-a8cb-3dc0736ceeb7_rw_600.jpg?h=7bf38aa7df503a7a6ff9a0571f41221d"/>
-					</div>
-					<div class="ad-item large">
-						<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/8db4f75c-f03b-4e14-9b5d-83df02a464b1_rw_600.jpg?h=b7b2c191a735f244452ac59bab295da2"/>
-					</div>
+			<div class="ad-top">
+				<div class="ad-item large">
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/6faf2bc8-7700-4f34-be8b-406147a7832f_rw_1920.jpg?h=7fe150722d048c84f0509ca1e4f0f79f"/>
 				</div>
+				<div class="ad-item large">
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/c11f7408-a1bd-420a-a8cb-3dc0736ceeb7_rw_600.jpg?h=7bf38aa7df503a7a6ff9a0571f41221d"/>
+				</div>
+				<div class="ad-item large">
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/8db4f75c-f03b-4e14-9b5d-83df02a464b1_rw_600.jpg?h=b7b2c191a735f244452ac59bab295da2"/>
+				</div>
+			</div>
 					
-				<div class="ad-subprojects-grid">
-					<div class="subproject" data-category="social">
-						<img id="adversitingImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/75870b7e-2fe6-4e08-a599-b2e1ad09a506_carw_16x9x1280.jpg?h=c38162cf8204cabadf36dab095fb97b0" />
-						<div class="overlay">Advertising</div>
-					</div>
-					<div class="subproject" data-category="social">
-						<img id="socialImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/61d46e2d-c0b3-4f0c-a64e-3a6a7f97fc07_rw_600.jpg?h=3372fadaa8e18caeca4e06df38bb0ec2" />
-						<div class="overlay">Social Media</div>
-					</div>
-				</div>				
-			/<div>
+			<div class="ad-subprojects-grid">
+				<div class="subproject" data-category="social">
+					<img id="adversitingImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/75870b7e-2fe6-4e08-a599-b2e1ad09a506_carw_16x9x1280.jpg?h=c38162cf8204cabadf36dab095fb97b0" />
+					<div class="overlay">Advertising</div>
+				</div>
+				<div class="subproject" data-category="social">
+					<img id="socialImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/61d46e2d-c0b3-4f0c-a64e-3a6a7f97fc07_rw_600.jpg?h=3372fadaa8e18caeca4e06df38bb0ec2" />
+					<div class="overlay">Social Media</div>
+				</div>
+			</div>				
+		<div>
 	</main>
 	
 	<div class="lightbox" id="lightbox">
