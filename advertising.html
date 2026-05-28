@@ -160,10 +160,13 @@
 			font-family: "Crimson Text", serif;
 			padding: 18px 26px 24px 26px;
 			text-align: center;
-			font-size: 31px;
-			line-height: 1.9;
+			font-size: clamp(22px, 1.6vw, 31px);
+			line-height: 1.4;
 			color: #6d6d6d;
-			letter-spacing:.2px
+			letter-spacing:.15px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow:ellipsis;
 		}
 		
 		.right-stack {
@@ -270,7 +273,7 @@
 		}
 		
 		.logo-block img {
-			width: 86%;
+			width: 72%;
 			height: 100%;
 			object-fit: contain;
 			display: block;
