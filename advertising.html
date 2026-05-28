@@ -42,10 +42,10 @@
 		
 		.sidebar h1 {
 			font-family: "Crimson Text", serif;
-			font-size: 34px;
+			font-size: 25px;
 			font-weight: 500;
 			line-height: 1.1;
-			margin-bottom: 50px;
+			margin-bottom: 40px;
 		}
 		
 		.about, .cv {
@@ -454,32 +454,16 @@
 				
 	</main>
 	
-	<!-- <div class="lightbox" id="lightbox">
+	<div class="lightbox" id="lightbox">
 		<span class="close" id="closeBtn">x</span>
 		<span class="nav prev" id="prevBtn"><</span>
 		<img class="lightbox-img" id="lightboxImg" src='' alt="">
 		<span class="nav next" id="nextBtn">></span>
-	</div> -->
+	</div>
 	
 	<script>
-		/*const allImg = document.querySelectorAll('.ad-item.large img');
-		const lightbox = document.getElementById('lightbox');
-		const lightboxImg = document.getElementById('lightboxImg');
-		const closeBtn = document.getElementById('closeBtn');
-		const nextBtn = document.getElementById('nextBtn');
-		const prevBtn = document.getElementById('prevBtn');
 		const visual = document.getElementById("visualExploration");
 		const work = document.getElementById("work");
-		const socImg = document.getElementById("socialImg");
-		const editImg = document.getElementById("editImg");
-		
-		socImg.addEventListener("click", function() {
-			window.location.href = "socialmedia.html"
-		});
-		
-		editImg.addEventListener("click", function() {
-			window.location.href = "edication.html"
-		});
 		
 		work.addEventListener("click", function() {
 			window.location.href = "work.html";
@@ -489,40 +473,75 @@
 			window.location.href = "visual.html";
 		});
 		
+		const imgAll = document.querySelectorAll("img");
+		const lightbox = document.getElementById("lightbox");
+		const lightboxImg = document.getElementById("lightboxImg");
+		
+		const closeBtn = document.getElementById('closeBtn');
+		const nextBtn = document.getElementById('nextBtn');
+		const prevBtn = document.getElementById('prevBtn');
 		
 		let currentIndex = 0;
-		const imagesArray = Array.from(allImg);
 		
-		imagesArray.forEach((img, index) => {
+		const imageArray = Array.from(imgAll);
+	
+		/* Open */
+		
+		imageArray.forEach((img, index) => {
 			img.addEventListener('click', () => {
 				currentIndex = index;
+				
 				lightbox.classList.add('active');
+
 				lightboxImg.src = img.src;
 			});
 		});
+		
+		closeBtn.addEventListener("click",()=>{
 
-		closeBtn.addEventListener('click', () => lightbox.classList.remove('active'));
+			lightbox.classList.remove("active");
+		});
+		
 		nextBtn.addEventListener('click', () => {
-			currentIndex = (currentIndex + 1) % imagesArray.length;
-			lightboxImg.src = imagesArray[currentIndex].src;
+			currentIndex = (currentIndex + 1) % imageArray.length;
+			lightboxImg.src = imageArray[currentIndex].src;
 		});
-		document.addEventListener("keydown", (e) => {
-			if(e.key === "ArrowRight"){
-				currentIndex = (currentIndex + 1) % imagesArray.length;
-				lightboxImg.src = imagesArray[currentIndex].src;
-			}
-			if(e.key === "ArrowLeft") {
-				currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
-				lightboxImg.src = imagesArray[currentIndex].src;
-			}
-		});
+		
 		prevBtn.addEventListener('click', () => {
-			currentIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
-			lightboxImg.src = imagesArray[currentIndex].src;
+			currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+			lightboxImg.src = imageArray[currentIndex].src;
 		});
+		
+		document.addEventListener("keydown",(e)=>{
 
-		lightbox.addEventListener('click', e => { 
-			if (e.target === lightbox) lightbox.classList.remove('active'); 
+			if(!lightbox.classList.contains("active")) return;
+
+			if(e.key === "ArrowRight"){
+
+				currentIndex =
+				(currentIndex + 1)
+				% imageArray.length;
+
+				lightboxImg.src =
+				imageArray[currentIndex].src;
+
+			}
+
+			if(e.key === "ArrowLeft"){
+
+				currentIndex =
+				(currentIndex - 1 + imageArray.length)
+				% imageArray.length;
+
+				lightboxImg.src =
+				imageArray[currentIndex].src;
+
+			}
+
+			if(e.key === "Escape"){
+				lightbox.classList.remove("active");
+			}
+
 		});
 		
 		const links = document.querySelectorAll(".menu a");
@@ -534,7 +553,7 @@
 				link.classList.add("active")
 				//link.closest(".menu-section").querySelector(".menu-section-title").classList.add("active");
 			}
-		});*/
+		});
 	</script>
 </body>
 </html>
