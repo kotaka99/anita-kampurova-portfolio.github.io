@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Anita Kamburova - Portfolio</title>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	<style>
@@ -20,29 +21,40 @@
 				min-height: 100vh;
 		}
 		
+		img {
+			image-rendering: auto;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+		
 		.sidebar {
 			width: 260px;
 			background: #efefef;
-			padding: 50px 40px;
-			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
+			padding: 50px 35px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100vh;
+			overflow-y: auto;
+			//flex-direction: column;
+			//justify-content: flex-start;
 		}
 		
 		.sidebar h1 {
 			font-family: "Crimson Text", serif;
-			font-size: 25px;
+			font-size: 34px;
 			font-weight: 500;
-			margin-bottom: 40px;
+			line-height: 1.1;
+			margin-bottom: 50px;
 		}
 		
 		.about, .cv {
 			display: block;
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 17px;
+			font-size: 16px;
 			color: black;
-			margin-bottom: 6px;
+			margin: 8px 0;
 
 			transition: color 0.2s ease;
 		}
@@ -57,7 +69,7 @@
 		}
 		
 		.menu-section {
-			margin-bottom: 30px;
+			margin-bottom: 35px;
 		}
 		
 		.menu-section-title {
@@ -101,66 +113,175 @@
 		}
 		
 		.main {
-			flex: 1;
-			padding: 60px 70px;
+			margin-left: 260px;
+			width:calc(100% - 260px);
+			padding: 50px;
 		}		
-	
-		@media (max-width: 1000px) {
-			body {
-				flex-direction: column;
-			}
-			.sidebar {
-				width: 100%;
-				padding: 30px;
-			}
-			.main {
-				padding: 40px 30px;
-			}
-		}
 		
-		h2 {
+		.page-title {
 			font-family: "Crimson Text", serif;
-			font-size: 28px;
+			font-size: 54px;
+			font-weight: 400;
 			text-align: center;
-			margin-bottom: 40px
+			margin-bottom: 35px
 		}
 		
-		.ad-top, .ad-bottom, .ad-subprojects-grid {
+		.campaign-grid {
 			display: grid;
-			gap: 20px;
-			margin-bottom: 40px;
+			grid-template-columns: 2fr 1fr;
+			gap: 18px;
+			margin-bottom: 28px;
 		}
 		
-		.ad-top {
-			grid-template-columns: 1fr 1fr;
+		.hero-wrapper{
+			display: flex;
+			flex-direction: column;
 		}
 		
-		.ad-bottom {
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		.hero-card {
+			overflow: hidden;
+			background: white;
 		}
 		
-		.ad-item.large {
-			height: 500px;
-		}
-		
-		.ad-item.small {
-			height: 200px;
-		}
-		
-		.ad-item img, .subproject img {
+		.hero-card img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			cursor: pointer;
-			transition: transform 0.3 ease;
-		}
-	
-		.ad-item img:hover, .subproject img:hover {
-			transform: scale(1.05);
+			display: block;
+			transition:transform .5s ease;
 		}
 		
-		.ad-subprojects-grid {
-			grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		.hero-card:hover img {
+			transform:scale(1.03);
+		}
+		
+		.hero-caption {
+			width: 100%
+			font-family: "Crimson Text", serif;
+			padding: 18px 26px 24px 26px;
+			text-align: center;
+			font-size: 13px;
+			line-height: 1.9;
+			color: #6d6d6d;
+			letter-spacing:.2px
+		}
+		
+		.right-stack {
+			display: grid;
+			flex-direction:column;
+			gap: 18px;
+		}
+		
+		.stack-item {
+			overflow: hidden;
+			background: white;
+		}
+		
+		.stack-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition:transform .5s ease;
+		}
+		
+		.stack-item:hover img {
+			transform:scale(1.03);
+		}
+		
+		.banner-wide {
+			overflow: hidden;
+			margin-bottom: 18px;
+			background: white;
+			margin-bottom:18px;
+		}
+		
+		.banner-wide img {
+			width:100%;
+			height:100%;
+			object-fit:cover;
+			display:block;
+			transition:transform .5s ease;
+		}
+		
+		.banner-wide:hover img {
+			transform:scale(1.03);
+		}
+		
+		.bottom-grid {
+			display: grid;
+			grid-template-columns: 1fr 1.3fr;
+			gap: 18px;
+		}
+		
+		.lifestyle {
+				overflow: hidden;
+				background: white;
+		}
+		
+		.lifestyle img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display:block;
+			transition: transform .5s ease;
+		}
+		
+		.lifestyle:hover img {
+			transform:scale(1.03);
+		}
+		
+		.right-content {
+			display: flex;
+			flex-direction: column;
+			gap: 18px;
+		}
+		
+		.quote-grid {
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			gap: 18px;
+		}
+		
+		.quote-card {
+			overflow: hidden;
+			background: white;
+		}
+		
+		.quote-card img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			transition: transform .4s ease;
+		}
+		
+		.quote-card:hover img {
+			transform:scale(1.03);
+		}
+		
+		.logo-block {
+			//overflow: hidden;
+			//background: white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+		}
+		
+		.logo-block img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+			image-rendering: auto;
+			backface-visibility: hidden;
+			transform: translateZ(0);
+			transition: transform .4s ease;
+		}
+		
+		.logo-block:hover img {
+			transform:scale(1.03);
 		}
 		
 		.subproject {
@@ -266,40 +387,79 @@
 	</aside>
 	
 	<main class="main">
-		<div class"advertising-page" id="advertisingPage">
-			<h2 style="font-weight: normal; text-align:center; margin-bottom:40px;"> Advertising</h2>
-				
-			<div class="ad-top">
-				<div class="ad-item large">
-					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/b89dbb13-55e8-4973-b848-1fe0b888fd12_rw_600.jpg?h=d31a0dcf130c1dd6be9bdf16b1f9403b"/>
+			<h2 class="page-title"> Advertising </h2>
+			<!-- TOP GRID -->
+			<div class="campaign-grid">
+				<!-- LEFT HERO -->
+				<div class="hero-wrapper">
+					<div class="hero-card">
+						<img src="https://lh3.googleusercontent.com/d/1MUAVJujMNg-5HbOymUU0oWOYOSaJv7vd" alt="">
+					</div>
+					
+					<div class="hero-caption">
+						NOIR - an espresso campaign exploring intesity as ritual, mindset, and choice.
+					</div>
 				</div>
-				<div class="ad-item large">
-					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/75870b7e-2fe6-4e08-a599-b2e1ad09a506_carw_16x9x1280.jpg?h=c38162cf8204cabadf36dab095fb97b0"/>
+				
+				<div class="right-stack">
+					<div class="stack-item">
+						<img src="https://lh3.googleusercontent.com/d/1UMUqx-2JPNgwL-CspHzTMThxcsRFXeqE" alt="">
+					</div>
+					
+					<div class="stack-item">
+						<img src="https://lh3.googleusercontent.com/d/1XqO3JoUufPQPWobJ_e5UBbKsueSHhJqu" alt="">
+					</div>
+					
+					<div class="stack-item">
+						<img src="https://lh3.googleusercontent.com/d/1bKB3eNQgG1xKoApMwES9yTFFcfq7KzVU" alt="">
+					</div>
 				</div>
 			</div>
+			
+			<!-- BANNER -->
+			<div class="banner-wide">
+				<img src="https://lh3.googleusercontent.com/d/1tJr7NuR3Jm1Q0GIy8OxWoaMEw8T1EIRy" alt="">
+			</div>
+			
+			<!-- BOTTOM -->
+			<div class="bottom-grid">
+				
+				<div class="lifestyle">
+					<img src="https://lh3.googleusercontent.com/d/19NnII4TrDOFO_1p29fpD67qt93zZ21Ja" alt="">
+				</div>
+				
+				<div class= "right-content">
+					<div class="quote-grid">
+						<div class="quote-card">
+							<img src="https://lh3.googleusercontent.com/d/1YHoGcH5Hp-lcARGEHpCCjm_1TuiAF3V8" alt="">
+						</div>
+						
+						<div class="quote-card">
+							<img src="https://lh3.googleusercontent.com/d/14SO5ABGDbiq4hmnwKBOBngnXdUEHEORh" alt="">
+						</div>
+						
+						<div class="quote-card">
+							<img src="https://lh3.googleusercontent.com/d/1RkZGJjUKmdIz_-KbVBYiTuVo_mDcGJVi" alt="">
+						</div>
+					</div>
 					
-			<div class="ad-subprojects-grid">
-				<div class="subproject" data-category="social">
-					<img id="socialImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/5f672019-e159-4f11-b427-1a6e8c9f03ca_carw_16x9x1280.jpg?h=a8c5a0306c6fc2b124925bb168e132e4" />
-					<div class="overlay">Social Media</div>
+					<div class="logo-block">
+						<img src="https://lh3.googleusercontent.com/d/1nRvrKlKYI2f4eORdAIMWm7omRV0lsWqg=s0" alt="">
+					</div>
 				</div>
-				<div class="subproject" data-category="social">
-					<img id="editImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/500bf6c5-eee5-4272-8323-7f68b718b051_carw_16x9x1280.jpg?h=9565eb9879ce5c94ed7ed4352e89bdc8" />
-					<div class="overlay">Editorial & Layout</div>
-				</div>
-			</div>				
-		<div>
+			</div>
+				
 	</main>
 	
-	<div class="lightbox" id="lightbox">
+	<!-- <div class="lightbox" id="lightbox">
 		<span class="close" id="closeBtn">x</span>
 		<span class="nav prev" id="prevBtn"><</span>
 		<img class="lightbox-img" id="lightboxImg" src='' alt="">
 		<span class="nav next" id="nextBtn">></span>
-	</div>
+	</div> -->
 	
 	<script>
-		const allImg = document.querySelectorAll('.ad-item.large img');
+		/*const allImg = document.querySelectorAll('.ad-item.large img');
 		const lightbox = document.getElementById('lightbox');
 		const lightboxImg = document.getElementById('lightboxImg');
 		const closeBtn = document.getElementById('closeBtn');
@@ -371,7 +531,7 @@
 				link.classList.add("active")
 				//link.closest(".menu-section").querySelector(".menu-section-title").classList.add("active");
 			}
-		});
+		});*/
 	</script>
 </body>
 </html>
