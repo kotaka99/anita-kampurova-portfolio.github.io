@@ -75,26 +75,6 @@
 			cursor: pointer;
 		}
 		
-		.about, .cv {
-			display: block;
-			text-decoration: none;
-			font-weight: 600;
-			font-size: 17px;
-			color: black;
-			margin-bottom: 6px;
-
-			transition: color 0.2s ease;
-		}
-		
-		.about:hover, .cv:hover {
-			color: #5a0f1a;
-			cursor: pointer;
-		}
-		
-		.about.active, .cv.active{
-			color: #5a0f1a;
-		}
-		
 		.menu a.active {
 			font-weight: 600;
 			color: #5a0f1a;
@@ -140,6 +120,10 @@
 			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		}
 		
+		.ad-item {
+			position: relative;
+		}
+		
 		.ad-item.large {
 			height: 500px;
 		}
@@ -149,6 +133,7 @@
 		}
 		
 		.ad-item img, .subproject img {
+			display: block;
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -189,8 +174,43 @@
 			pointer-events: none;
 		}
 		
-		.subproject:hover .overlay { 
+		.overlay.text {
+			text-decoration: underline;
+			top: 216px;
+			left: 11px;
+			font-weight: 500;
+			color: white;
+			background: rgba(0, 0, 0, 0);
+			align-items: center;
+			justify-content: center;
+			font-size: 18px;
+			pointer-events: none;
+			letter-spacing: 1px;
+			text-shadow: 0 3px 6px rgba(0, 0, 0, 2), 0 0 10px rgba(0, 0, 0, 1.2);
+		}
+			
+		.ad-item.large:hover .overlay { 
 			opacity: 1;
+		}
+		
+		.about, .cv {
+			display: block;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 17px;
+			color: black;
+			margin-bottom: 6px;
+
+			transition: color 0.2s ease;
+		}
+		
+		.about:hover, .cv:hover {
+			color: #5a0f1a;
+			cursor: pointer;
+		}
+		
+		.about.active, .cv.active{
+			color: #5a0f1a;
 		}
 		
 		.lightbox {
@@ -269,30 +289,26 @@
 	
 	<main class="main">
 		<div class"advertising-page" id="advertisingPage">
-			<h2 style="font-weight: normal; text-align:center; margin-bottom:40px;">Editorial & Layout</h2>
+			<h2 style="font-weight: normal; text-align:center; margin-bottom:40px;">Personal Projects</h2>
 				
 			<div class="ad-top">
 				<div class="ad-item large">
-					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/6faf2bc8-7700-4f34-be8b-406147a7832f_rw_1920.jpg?h=7fe150722d048c84f0509ca1e4f0f79f"/>
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/b4f93339-1414-4e36-b227-102f8319a5ae_rw_600.jpeg?h=7201b888cabba16bf6ec8ff5693ca526"/>
+					<div class="overlay text">oil nesho si</div>
 				</div>
 				<div class="ad-item large">
-					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/c11f7408-a1bd-420a-a8cb-3dc0736ceeb7_rw_600.jpg?h=7bf38aa7df503a7a6ff9a0571f41221d"/>
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/8fe6d0f2-5275-4e6d-aeef-2a4e560080b6_rw_600.jpeg?h=6799ae8785c78ac2e20d54d3c59ef513"/>
+					<div class="overlay text">oil nesho </div>
 				</div>
 				<div class="ad-item large">
-					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/8db4f75c-f03b-4e14-9b5d-83df02a464b1_rw_600.jpg?h=b7b2c191a735f244452ac59bab295da2"/>
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/95b35741-55e3-4199-a3e1-5a487701bea4_rw_600.jpg?h=07ae18ee6004ff6225e2b224c2b4c876"/>
+					<div class="overlay text">oil nesh</div>
+				</div>
+				<div class="ad-item large">
+					<img src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/f6f44fbe-467b-49ca-920c-726a016de73b_rw_1920.jpeg?h=7248811a101d1e9309c68995afa0ad0c"/>
+					<div class="overlay text">oil nes</div>
 				</div>
 			</div>
-					
-			<div class="ad-subprojects-grid">
-				<div class="subproject" data-category="social">
-					<img id="adversitingImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/75870b7e-2fe6-4e08-a599-b2e1ad09a506_carw_16x9x1280.jpg?h=c38162cf8204cabadf36dab095fb97b0" />
-					<div class="overlay">Advertising</div>
-				</div>
-				<div class="subproject" data-category="social">
-					<img id="socialImg" src="https://cdn.myportfolio.com/bba462d2-ea02-48ce-b044-9d4aacab1454/61d46e2d-c0b3-4f0c-a64e-3a6a7f97fc07_rw_600.jpg?h=3372fadaa8e18caeca4e06df38bb0ec2" />
-					<div class="overlay">Social Media</div>
-				</div>
-			</div>				
 		<div>
 	</main>
 	
@@ -312,16 +328,6 @@
 		const prevBtn = document.getElementById('prevBtn');
 		const visual = document.getElementById("visualExploration");
 		const work = document.getElementById("work");
-		const adImg = document.getElementById("adversitingImg");
-		const socImg = document.getElementById("socialImg");
-		
-		adImg.addEventListener("click", function() {
-			window.location.href = "advertising.html"
-		});
-		
-		socImg.addEventListener("click", function() {
-			window.location.href = "socialmedia.html"
-		});
 		
 		work.addEventListener("click", function() {
 			window.location.href = "work.html";
@@ -371,8 +377,7 @@
 		const currentPage = window.location.pathname.split("/").pop();
 		
 		links.forEach(link => {
-			const linkHref = link.getAttribute('href').split("/").pop();
-			if(linkHref === currentPage || linkHref === currentPage.replace(".html", "")) {
+			if(link.getAttribute("href") === currentPage) {
 				link.classList.add("active")
 				//link.closest(".menu-section").querySelector(".menu-section-title").classList.add("active");
 			}
