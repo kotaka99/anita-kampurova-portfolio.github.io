@@ -132,10 +132,20 @@
 			height: 200px;
 		}
 		
+		.span-two {
+			grid-column: 1 / -1;
+		}
+		
+		.span-two img{
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		
 		.ad-item img, .subproject img {
 			display: block;
 			width: 100%;
-			height: auto;
+			height: 100%;
 			object-fit: cover;
 			cursor: pointer;
 			transition: transform 0.3 ease;
@@ -293,10 +303,6 @@
 				
 			<div class="ad-top">
 				<div class="ad-item large">
-					<img src="https://lh3.googleusercontent.com/d/1L7Un1W3PxzWuMDqYx6_O3zMY4qbD-9Tt"/>
-					<!-- <div class="overlay text">oil nesho si</div>-->
-				</div>
-				<div class="ad-item large">
 					<img src="https://lh3.googleusercontent.com/d/1VibGuk8TOP4XgcY1ClgR8aw0z0yCjJwl"/>
 					<!-- <div class="overlay text">oil nesho </div>-->
 				</div>
@@ -304,7 +310,7 @@
 					<img src="https://lh3.googleusercontent.com/d/1VL6oQ530dd_btKSidcCyKAm8XyC4yc1a"/>
 					<!-- <div class="overlay text">oil nesh</div>-->
 				</div>
-				<div class="ad-item large">
+				<div class="ad-item span-two">
 					<img src="https://lh3.googleusercontent.com/d/1Hv0yBpIEWLX9Ruo1bO00Gq3GvIKqQql3"/>
 					<!-- <div class="overlay text">oil nes</div>-->
 				</div>
