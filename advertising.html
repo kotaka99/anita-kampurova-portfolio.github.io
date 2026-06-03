@@ -30,21 +30,19 @@
 		.sidebar {
 			width: 260px;
 			background: #efefef;
-			padding: 50px 35px;
+			padding: 50px 40px;
 			position: fixed;
-			top: 0;
-			left: 0;
+			display:flex;
 			height: 100vh;
-			overflow-y: auto;
-			//flex-direction: column;
-			//justify-content: flex-start;
+			flex-direction: column;
+			justify-content: flex-start;
 		}
 		
 		.sidebar h1 {
 			font-family: "Crimson Text", serif;
 			font-size: 25px;
 			font-weight: 500;
-			line-height: 1.1;
+			//line-height: 1.1;
 			margin-bottom: 40px;
 		}
 		
@@ -52,9 +50,9 @@
 			display: block;
 			text-decoration: none;
 			font-weight: 600;
-			font-size: 16px;
+			font-size: 17px;
 			color: black;
-			margin: 8px 0;
+			margin-bottom: 6px;
 
 			transition: color 0.2s ease;
 		}
@@ -69,7 +67,7 @@
 		}
 		
 		.menu-section {
-			margin-bottom: 35px;
+			margin-bottom: 30px;
 		}
 		
 		.menu-section-title {
@@ -94,6 +92,7 @@
 				font-size: 17px;
 				margin: 6px 0;
 				cursor: pointer;
+				//font-weight: 600;
 				transition: color 0.2s ease;
 		}
 		
@@ -102,6 +101,10 @@
 			color: #5a0f1a;
 		}
 		
+		/*.menu-section-title:active {
+			color: #5a0f1a;
+			font-weight: 700;
+		}*/
 		.menu-section-title:hover {
 			color: #5a0f1a;
 			cursor: pointer;
@@ -113,9 +116,10 @@
 		}
 		
 		.main {
+			//flex: 1;
 			margin-left: 260px;
-			width:calc(100% - 260px);
-			padding: 50px;
+			//width:calc(100% - 260px);
+			padding: 60px 70px;
 		}		
 		
 		.page-title {
@@ -361,6 +365,21 @@
 		.next { 
 			right: 40px; 
 		}
+		
+		@media (max-width: 1000px) {
+			body {
+				flex-direction: column;
+			}
+
+			.sidebar {
+				width: 100%;
+				padding: 30px;
+			}
+
+			.main {
+				padding: 40px 30px;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -371,7 +390,6 @@
 			<div class="menu-section-title" id="work">Work</div>
 			<div class="menu">
 			<a href="advertising.html">Advertising</a>
-			<!-- <a href="socialmedia.html">Social Media</a> -->
 			<a href="edication.html">Editorial & Layout</a>
 			</div>
 		</div>
