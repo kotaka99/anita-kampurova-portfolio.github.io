@@ -185,8 +185,9 @@
 				padding: 15px;
 			}
 			
-			.about-content {
+			.project-grid {
 				grid-template-columns: repeat(2, 1fr);
+				//gap: 8px;
 			}
 
 			.project {
@@ -216,6 +217,12 @@
 				font-size: 15px;
 			}
 
+			.overlay {
+				font-size: clamp(11px, 2vw, 28px);
+				text-align: center;
+				padding: 0 6px;
+			}
+			
 			.menu-section-title,
 			.menu a,
 			.about,
@@ -224,7 +231,6 @@
 			}
 
 			.main {
-				margin-left: 30px;
 				padding: 12px;
 			}
 
@@ -232,15 +238,30 @@
 				font-size: 20px;
 			}
 
-			.campaign-grid,
-			.bottom-grid,
-			.quote-grid {
-				gap: 6px;
+			.about-section {
+				padding: 20px 12px;
+				align-items: flex-start;
 			}
 
-			.hero-caption {
-				font-size: 5px;
-				padding: 8px;
+			.about-content {
+				max-width: 100%;
+			}
+
+			.about-content h2 {
+				font-size: 20px;
+				margin-bottom: 20px;
+			}
+
+			.about-content p {
+				font-size: 12px;
+				line-height: 1.3;
+				margin-bottom: 16px;
+			}
+
+			.btn {
+				padding: 10px 20px;
+				font-size: 10px;
+				margin-top: 10px;
 			}
 		}
 		
