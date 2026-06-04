@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Anita Kamburova - Portfolio</title>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	<style>
@@ -104,19 +105,6 @@
 		.main {
 			flex: 1;
 			padding: 60px 70px;
-		}		
-	
-		@media (max-width: 1000px) {
-			body {
-				flex-direction: column;
-			}
-			.sidebar {
-				width: 100%;
-				padding: 30px;
-			}
-			.main {
-				padding: 40px 30px;
-			}
 		}
 		
 		h2 {
@@ -144,6 +132,7 @@
 		}
 		
 		.ad-item.large {
+			overflow: hidden;
 			height: auto;
 		}
 		
@@ -164,13 +153,14 @@
 		.ad-item img, .subproject img {
 			width: 100%;
 			height: 100%;
+			display: block;
 			object-fit: cover;
 			cursor: pointer;
-			transition: transform 0.3 ease;
+			transition: transform .5s ease;
 		}
 	
 		.ad-item img:hover, .subproject img:hover {
-			transform: scale(1.05);
+			transform: scale(1.03);
 		}
 		
 		.ad-subprojects-grid {
@@ -250,6 +240,102 @@
 		
 		.next { 
 			right: 40px; 
+		}
+
+		@media (max-width: 1024px) {
+			
+			.sidebar {
+				width: 180px;
+				padding: 30px 20px;
+			}
+			.main {
+				padding: 30px;
+			}
+
+		}
+		
+		@media (max-width: 768px) {
+
+			.sidebar {
+				width: 140px;
+				padding: 20px 15px;
+			}
+
+			.sidebar h1 {
+				font-size: 18px;
+				margin-bottom: 25px;
+			}
+
+			.menu a,
+			.about,
+			.cv,
+			.menu-section-title {
+				font-size: 13px;
+			}
+
+			.menu-section {
+				margin-bottom: 18px;
+			}
+
+			.main {
+				padding: 12px;
+			}
+
+			.ad-top {
+				gap: 6px;
+			}
+			
+			.nav {
+				font-size: 28px;
+			}
+
+			.prev {
+				left: 10px;
+			}
+
+			.next {
+				right: 10px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+
+			.sidebar {
+				width: 110px;
+				padding: 15px 10px;
+			}
+
+			.sidebar h1 {
+				font-size: 15px;
+			}
+
+			.overlay {
+				font-size: clamp(11px, 2vw, 28px);
+				text-align: center;
+				padding: 0 6px;
+			}
+			
+			.menu-section-title,
+			.menu a,
+			.about,
+			.cv {
+				font-size: 11px;
+			}
+
+			.page-title {
+				font-size: 20px;
+			}
+
+			.campaign-grid,
+			.bottom-grid,
+			.quote-grid {
+				gap: 6px;
+			}
+
+			.hero-caption {
+				font-size: 5px;
+				padding: 8px;
+			}
 		}
 	</style>
 </head>

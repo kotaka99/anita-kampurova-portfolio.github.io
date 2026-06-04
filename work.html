@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Anita Kamburova - Portfolio</title>
 	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 	<style>
@@ -178,22 +179,105 @@
 			height: 350px;
 		}
 	
-		@media (max-width: 1000px) {
-			body {
-				flex-direction: column;
-			}
+		@media (max-width: 1024px) {
+
 			.sidebar {
-				width: 100%;
-				padding: 30px;
+				width: 180px;
+				padding: 30px 20px;
 			}
-			.main {
-				padding: 40px 30px;
+
+			.menu-section {
+				margin-bottom: 15px;
 			}
+
+
+			.page-title {
+				font-size: 28px;
+				margin-bottom: 30px;
+			}
+
 			.project-grid {
-				grid-template-columns: 1fr;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 0;
 			}
-			.project.full {
-				grid-column: span 1;
+
+			.project {
+				height: 225px;
+			}
+
+		}
+		
+		@media (max-width: 768px) {
+			.sidebar {
+				padding: 15px;
+			}
+
+			.main {
+				padding: 15px;
+			}
+			
+			.project-grid {
+				grid-template-columns: repeat(2, 1fr);
+				//gap: 8px;
+			}
+
+			.project {
+				height: 180px;
+			}
+
+			.page-title {
+				font-size: 24px;
+			}
+
+			.menu a,
+			.about,
+			.cv,
+			.menu-section-title {
+				font-size: 15px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+
+			.sidebar {
+				width: 110px;
+				padding: 15px 10px;
+			}
+
+			.sidebar h1 {
+				font-size: 15px;
+			}
+
+			.overlay {
+				font-size: clamp(11px, 2vw, 28px);
+				text-align: center;
+				padding: 0 6px;
+			}
+			
+			.menu-section-title,
+			.menu a,
+			.about,
+			.cv {
+				font-size: 11px;
+			}
+
+			.main {
+				padding: 12px;
+			}
+
+			.page-title {
+				font-size: 20px;
+			}
+
+			.campaign-grid,
+			.bottom-grid,
+			.quote-grid {
+				gap: 6px;
+			}
+
+			.hero-caption {
+				font-size: 5px;
+				padding: 8px;
 			}
 		}
 	</style>

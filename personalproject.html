@@ -85,19 +85,6 @@
 			flex: 1;
 			padding: 60px 70px;
 		}		
-	
-		@media (max-width: 1000px) {
-			body {
-				flex-direction: column;
-			}
-			.sidebar {
-				width: 100%;
-				padding: 30px;
-			}
-			.main {
-				padding: 40px 30px;
-			}
-		}
 		
 		h2 {
 			font-family: "Crimson Text", serif;
@@ -126,6 +113,7 @@
 		}
 		
 		.ad-item.large {
+			overflow: hidden;
 			aspect-ration: 3/4;
 			overflow: hidden;
 		}
@@ -139,11 +127,11 @@
 			height: 100%;
 			object-fit: cover;
 			cursor: pointer;
-			transition: transform 0.3 ease;
+			transition: transform .5s ease;;
 		}
 	
 		.ad-item img:hover, .subproject img:hover {
-			transform: scale(1.05);
+			transform: scale(1.03);
 		}
 		
 		.ad-subprojects-grid {
@@ -258,6 +246,101 @@
 		
 		.next { 
 			right: 40px; 
+		}
+		
+		@media (max-width: 1024px) {
+			
+			.sidebar {
+				width: 180px;
+				padding: 30px 20px;
+			}
+			.main {
+				padding: 30px;
+			}
+
+		}
+		
+		@media (max-width: 768px) {
+
+			.sidebar {
+				width: 140px;
+				padding: 20px 15px;
+			}
+
+			.sidebar h1 {
+				font-size: 18px;
+				margin-bottom: 25px;
+			}
+
+			.menu a,
+			.about,
+			.cv,
+			.menu-section-title {
+				font-size: 13px;
+			}
+
+			.menu-section {
+				margin-bottom: 18px;
+			}
+
+			.main {
+				padding: 12px;
+			}
+
+			.ad-top {
+				gap: 6px;
+			}
+			
+			.nav {
+				font-size: 28px;
+			}
+
+			.prev {
+				left: 10px;
+			}
+
+			.next {
+				right: 10px;
+			}
+		}
+		
+		@media (max-width: 480px) {
+
+			.sidebar {
+				width: 110px;
+				padding: 15px 10px;
+			}
+
+			.sidebar h1 {
+				font-size: 15px;
+			}
+
+			.menu-section-title,
+			.menu a,
+			.about,
+			.cv {
+				font-size: 11px;
+			}
+
+			.main {
+				margin-left: 30px;
+				padding: 12px;
+			}
+
+			.page-title {
+				font-size: 20px;
+			}
+
+			.campaign-grid,
+			.bottom-grid,
+			.quote-grid {
+				gap: 6px;
+			}
+
+			.hero-caption {
+				font-size: 5px;
+				padding: 8px;
+			}
 		}
 	</style>
 </head>
